@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
   final List<String> nav = ['Мои фото', 'Галерея'];
- // final List<String> fakeData = List.generate(10, (index) => index.toString());
   Map<String, dynamic> data = {
     'Мои фото': [
       'https://picsum.photos/1200/501',
