@@ -62,7 +62,7 @@ class MyHomePage extends StatelessWidget {
               return ListView(
                 key: PageStorageKey(name),
                 children: <Widget>[
-                  ...ListOfLinks.fromJson(data, name).images.map((image) {
+                  ...(data[name] as List<String>).map((image) {
                     return Image.network(image);
                   }).toList()
                 ],
@@ -73,15 +73,15 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class ListOfLinks {
-  List<String> images;
-
-  ListOfLinks({required this.images});
-
-  factory ListOfLinks.fromJson(Map<String, dynamic> json, String galeryName) {
-    return ListOfLinks(images: json[galeryName] as List<String>);
-  }
-}
+// class ListOfLinks {
+//   List<String> images;
+//
+//   ListOfLinks({required this.images});
+//
+//   factory ListOfLinks.fromJson(Map<String, dynamic> json, String galeryName) {
+//     return ListOfLinks(images: json[galeryName] as List<String>);
+//   }
+// }
 
 // class ImageList extends StatelessWidget {
 //   final List<String> imageString;
